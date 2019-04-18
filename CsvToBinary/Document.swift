@@ -17,7 +17,7 @@ class Document: NSDocument {
         // Add your subclass-specific initialization here.
     }
     
-    override class func autosavesInPlace() -> Bool {
+     class func autosavesInPlace() -> Bool {
         return true
     }
     
@@ -36,7 +36,7 @@ class Document: NSDocument {
     
     override func read(from data: Data, ofType typeName: String) throws {
         
-        let fileContent = String(data: data, encoding: String.Encoding.utf8) as String!
+        let fileContent = String(data: data, encoding: String.Encoding.utf8) as String?
         
         let d = Date()
         
